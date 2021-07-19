@@ -142,11 +142,6 @@ CMD ./server.sh
 ```
 **Commands**
 ```
-docker build . -t curler
-docker run -it curler
-```
-**Results**
-```
 $ docker build . -t curler
 [+] Building 1.0s (10/10) FINISHED
 [...]
@@ -161,4 +156,73 @@ Searching..
 <h1>Moved Permanently</h1>
 <p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
 </body></html>
+```
+
+## 1.9: Volumes
+```
+$ touch text.log
+$ docker container run -d -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+66d41cacb032752a439c20fc4f099382dc4fd5f1995abeb99abbd0e27f7bb983
+$ cat text.log
+2021-07-19 11:23:41 +0000 UTC
+2021-07-19 11:23:43 +0000 UTC
+2021-07-19 11:23:45 +0000 UTC
+2021-07-19 11:23:47 +0000 UTC
+2021-07-19 11:23:49 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+```
+
+## 1.10: Ports open
+```
+$ docker container run -dit -p 8080:8080 --name web-server devopsdockeruh/simple-web-service sh -c 'server'
+1d586a88a5e1fd0f50b8193bc40c1ef25a2051eb180361d2e0fd39167f0f4873
+$ curl localhost:8080
+{"message":"You connected to the following path: /","path":"/"}
+```
+
+## 1.11: Spring
+**Dockerfile**
+```
+FROM openjdk:8
+
+EXPOSE 8080
+
+WORKDIR /usr/src/app
+
+COPY ./spring-src .
+
+RUN ./mvnw package
+CMD java -jar ./target/docker-example-1.1.3.jar
+
+```
+
+```
+$ docker build . -t spring
+[+] Building 1.1s (9/9) FINISHED                                                                                                                                                           
+[...]                                                                                                                               0.0s
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+$ docker run -dit -p 8080:8080 spring
+90d72afb78b6ed21aa085ce822959cd079a8f1fd2c838108e9a97125550f6ca7
+$ curl localhost:8080
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <title>Spring</title>
+        <meta charset="UTF-8" />
+
+    </head>
+    <body style="width: fit-content; padding-top: 3em; margin: auto;">
+        <form action="/press" method="post">
+            <button class="btn btn-info btn-outline-dark" type="submit">Press here</button>
+        </form>
+        <p style="width: fit-content; margin: auto;"></p>
+    </body>
+</html>
+
+```
+
+## 1.12: Hello, frontend!
+
+```
+
 ```

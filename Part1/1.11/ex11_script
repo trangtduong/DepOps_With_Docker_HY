@@ -1,0 +1,87 @@
+Script started on Mon Jul 19 15:50:55 2021
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034h(base) [36mtrangduong[m@[32mDucs-MacBook-Pro:[33;1m1.11[m$ docker build . -t spring
+[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                                                                                                                    
+[?25h[1A[0G[?25l[+] Building 0.1s (1/2)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/openjdk:8                                                                                                                          0.1s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.4s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/openjdk:8                                                                                                                          0.2s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/openjdk:8                                                                                                                          0.4s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.7s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/openjdk:8                                                                                                                          0.5s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.9s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/openjdk:8                                                                                                                          0.7s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.0s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/openjdk:8                                                                                                                          0.8s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.1s (9/9) FINISHED                                                                                                                                                           
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m[34m => [internal] load metadata for docker.io/library/openjdk:8                                                                                                                          0.8s
+[0m[34m => [1/4] FROM docker.io/library/openjdk:8@sha256:4355999bcc6d1f2e40f7b7fde47bd6fd94d508b26b7d0e7ea8ae453627e185ab                                                                    0.0s
+[0m[34m => [internal] load build context                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 3.24kB                                                                                                                                                   0.0s
+[0m[34m => CACHED [2/4] WORKDIR /usr/src/app                                                                                                                                                 0.0s
+[0m[34m => CACHED [3/4] COPY ./spring-src .                                                                                                                                                  0.0s
+[0m[34m => CACHED [4/4] RUN ./mvnw package                                                                                                                                                   0.0s
+[0m[34m => exporting to image                                                                                                                                                                0.0s
+[0m[34m => => exporting layers                                                                                                                                                               0.0s
+[0m[34m => => writing image sha256:d1d7e2a20ce148f6397b68ac54fa003a961c04b9ae252941b174782ab7a78cc1                                                                                          0.0s
+[0m[34m => => naming to docker.io/library/spring                                                                                                                                             0.0s
+[0m[?25h
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+(base) [36mtrangduong[m@[32mDucs-MacBook-Pro:[33;1m1.11[m$ docker run -dit -p 8080:8080 spring
+90d72afb78b6ed21aa085ce822959cd079a8f1fd2c838108e9a97125550f6ca7
+(base) [36mtrangduong[m@[32mDucs-MacBook-Pro:[33;1m1.11[m$ curl localhost:8080
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <title>Spring</title>
+        <meta charset="UTF-8" />
+
+    </head>
+    <body style="width: fit-content; padding-top: 3em; margin: auto;">
+        <form action="/press" method="post">
+            <button class="btn btn-info btn-outline-dark" type="submit">Press here</button>
+        </form>
+        <p style="width: fit-content; margin: auto;"></p>
+    </body>
+</html>
+(base) [36mtrangduong[m@[32mDucs-MacBook-Pro:[33;1m1.11[m$ exit
+exit
+
+Script done on Mon Jul 19 15:51:36 2021
