@@ -1,0 +1,77 @@
+Script started on Mon Jul 19 11:32:17 2021
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034h(base) [36mtrangduong[m@[32mDucs-MacBook-Pro:[33;1m1.8[m$ docker build . -t curler
+[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                                                                                                                    
+[?25h[1A[0G[?25l[+] Building 0.1s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                                                       0.0s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                                                       0.1s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.4s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                                                       0.3s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                                                       0.4s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.7s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                                                       0.6s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.9s (2/3)                                                                                                                                                                    
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                                                       0.8s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.0s (10/10) FINISHED                                                                                                                                                         
+[34m => [internal] load build definition from Dockerfile                                                                                                                                  0.0s
+[0m[34m => => transferring dockerfile: 37B                                                                                                                                                   0.0s
+[0m[34m => [internal] load .dockerignore                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                                       0.0s
+[0m[34m => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                                                       0.8s
+[0m[34m => [1/5] FROM docker.io/library/ubuntu:18.04@sha256:3b8692dc4474d4f6043fae285676699361792ce1828e22b1b57367b5c05457e3                                                                 0.0s
+[0m[34m => [internal] load build context                                                                                                                                                     0.0s
+[0m[34m => => transferring context: 30B                                                                                                                                                      0.0s
+[0m[34m => CACHED [2/5] WORKDIR /urs/src/app                                                                                                                                                 0.0s
+[0m[34m => CACHED [3/5] COPY server.sh .                                                                                                                                                     0.0s
+[0m[34m => CACHED [4/5] RUN apt update; apt install curl -y                                                                                                                                  0.0s
+[0m[34m => CACHED [5/5] RUN chmod +x server.sh                                                                                                                                               0.0s
+[0m[34m => exporting to image                                                                                                                                                                0.0s
+[0m[34m => => exporting layers                                                                                                                                                               0.0s
+[0m[34m => => writing image sha256:d28a7622f0476ae0353fba7a78563768bfdb1c48c1b105917f0a38db4dd30434                                                                                          0.0s
+[0m[34m => => naming to docker.io/library/curler                                                                                                                                             0.0s
+[0m[?25h
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+(base) [36mtrangduong[m@[32mDucs-MacBook-Pro:[33;1m1.8[m$ docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
+(base) [36mtrangduong[m@[32mDucs-MacBook-Pro:[33;1m1.8[m$ exit
+exit
+
+Script done on Mon Jul 19 11:32:49 2021

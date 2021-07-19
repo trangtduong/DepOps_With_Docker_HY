@@ -1,0 +1,25 @@
+$ docker pull devopsdockeruh/simple-web-service:ubuntu
+ubuntu: Pulling from devopsdockeruh/simple-web-service
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a
+Status: Image is up to date for devopsdockeruh/simple-web-service:ubuntu
+docker.io/devopsdockeruh/simple-web-service:ubuntu
+$ docker pull devopsdockeruh/simple-web-service:alpine
+alpine: Pulling from devopsdockeruh/simple-web-service
+[...]
+4f4fb700ef54: Pull complete 
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+docker.io/devopsdockeruh/simple-web-service:alpine
+$ docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   4 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   4 months ago   15.7MB
+$ docker run -d --rm -it --name uh_alpine devopsdockeruh/simple-web-service:alpine
+d689b28be71c264ab6cc66c825b763404bbb72e3ec572a44fb3366680c149548
+$ docker exec -it uh_alpine sh
+/usr/src/app # tail -f ./text.log
+2021-07-18 15:26:48 +0000 UTC
+2021-07-18 15:26:50 +0000 UTC
+2021-07-18 15:26:52 +0000 UTC
+2021-07-18 15:26:54 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'

@@ -94,7 +94,7 @@ You found the correct password. Secret message is:
 FROM devopsdockeruh/simple-web-service:alpine
 CMD server
 ```
-
+Command to build image web-server:
 ```
 $ docker build . -t web-server
 [+] Building 0.2s (5/5) FINISHED                                                                                                                                                           
@@ -110,6 +110,9 @@ $ docker build . -t web-server
  => => naming to docker.io/library/web-server                                                                                                                                         0.0s
 
 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+```
+Running the built 'web-server' image:
+```
 $ docker run web-server
 [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
 
@@ -119,4 +122,43 @@ $ docker run web-server
 
 [GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
+```
+
+## 1.8: Image for script
+**Dockerfile**
+```
+FROM ubuntu:18.04
+
+WORKDIR /urs/src/app
+
+COPY server.sh .
+
+RUN apt update; apt install curl -y
+
+RUN chmod +x server.sh
+
+CMD ./server.sh
+
+```
+**Commands**
+```
+docker build . -t curler
+docker run -it curler
+```
+**Results**
+```
+$ docker build . -t curler
+[+] Building 1.0s (10/10) FINISHED
+[...]
+$ docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
 ```
