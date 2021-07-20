@@ -222,7 +222,62 @@ $ curl localhost:8080
 ```
 
 ## 1.12: Hello, frontend!
+**Dockerfile**
+```
+FROM ubuntu:latest
+
+EXPOSE 5000
+
+WORKDIR /urs/src/app
+
+COPY . .
+
+RUN apt update && apt install curl -y
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash
+RUN apt install nodejs -y
+RUN npm install && npm run build && npm install -g serve
+
+CMD serve -s -l 5000 build
 
 ```
+```
+$ docker build . -t frontend
+[+] Building 215.1s (12/12) FINISHED  
+[...]
+$ docker run -dp 5000:5000 frontend
+a97da19a411b0675564a540c04021b3659a30a6d06df163db60482f4f9cbf80b
+```
+**Message in http://localhost:5000:**
+Part 1
+Exercise 1.12: Congratulations! You configured your ports correctly!
 
+## 1.13: Hello, backend!
+**Dockerfile**
+```FROM ubuntu
+
+EXPOSE 8080
+
+WORKDIR /urs/src/app
+
+COPY . .
+
+RUN apt-get update && apt-get upgrade && apt install curl gcc -y
+
+RUN curl -L -0 https://golang.org/dl/go1.16.6.linux-amd64.tar.gz --output go1.16.6.linux-amd64.tar.gz 
+RUN tar -xzvf go1.16.6.linux-amd64.tar.gz -C /usr/local/
+ENV PATH=$PATH:/usr/local/go/bin
+
+RUN go build
+RUN go test ./...
+CMD ./server
+```
+
+```
+$ docker build . -t backend
+[+] Building 117.3s (13/13) FINISHED                                                                     [...]                     
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+$ docker run -dit -p 8080:8080 backend
+735bd850281d5cae18df95bfe615f046eebd56d051a668c3be2c88547747d31b
+$ curl localhost:8080/ping
+pong
 ```

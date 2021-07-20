@@ -1,0 +1,6 @@
+Dockerfile
+.dockerignore
+node_modules
+README.md
+ex12_commands
+ex12_script
